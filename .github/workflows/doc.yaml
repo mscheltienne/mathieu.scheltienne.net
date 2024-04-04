@@ -31,12 +31,11 @@ jobs:
         run: |
           cd src
           mkdocs build --strict
-          ls -l
       - name: Upload documentation
         uses: actions/upload-artifact@v4
         with:
           name: website
-          path: ./site
+          path: site
 
   deploy:
     if: github.event_name == 'push'
