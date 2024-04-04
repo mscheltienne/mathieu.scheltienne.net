@@ -6,3 +6,6 @@
 
 # Venv
 .venv
+
+# mkdocs build directory
+src/site

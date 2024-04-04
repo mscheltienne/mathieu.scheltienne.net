@@ -1,0 +1,6 @@
+mkdocs
+mkdocs-htmlproofer-plugin
+mkdocs-material
+mkdocs-open-in-new-tab
+mkdocs-unused-files
+yamllint

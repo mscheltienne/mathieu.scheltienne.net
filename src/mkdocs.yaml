@@ -1,0 +1,15 @@
+site_name: Mathieu Scheltienne
+site_url: https://mathieu.scheltienne.net
+nav:
+    - About me: index.md
+    - Curriculum Vitæ: cv.md
+theme:
+    name: material
+    palette:
+        primary: teal
+        accent: cyan
+plugins:
+    - htmlproofer
+    - open-in-new-tab
+    - unused_files:
+          strict: true
