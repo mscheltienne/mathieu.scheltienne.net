@@ -30,12 +30,12 @@ jobs:
       - name: Build doc
         run: |
           cd src
-          mkdocs build --strict
+          mkdocs build --strict --site-dir build
       - name: Upload documentation
         uses: actions/upload-artifact@v4
         with:
           name: website
-          path: site
+          path: ./build
 
   deploy:
     if: github.event_name == 'push'
