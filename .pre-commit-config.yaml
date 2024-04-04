@@ -4,4 +4,4 @@ repos:
       hooks:
           - id: yamllint
             args: [--strict, -c, .yamllint.yaml]
-            files: (src/mkdocs.yaml|.yamllint.yaml)
+            files: (.github/|src/mkdocs.yaml|.yamllint.yaml)
