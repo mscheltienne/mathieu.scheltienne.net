@@ -1,0 +1,4 @@
+baseURL = 'https://mathieu.scheltienne.net'
+languageCode = 'en-us'
+title = 'Mathieu Scheltienne'
+theme= 'personal-web'

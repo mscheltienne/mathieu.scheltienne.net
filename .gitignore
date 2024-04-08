@@ -9,3 +9,8 @@
 
 # Python package
 *.egg-info
+
+# Hugo build directories
+src/.hugo_build.lock
+src/public
+src/resources

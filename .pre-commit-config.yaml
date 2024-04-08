@@ -10,4 +10,4 @@ repos:
       rev: v0.23.1
       hooks:
           - id: toml-sort-fix
-            files: pyproject.toml
+            files: (pyproject.toml|src/*.toml)
