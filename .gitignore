@@ -7,5 +7,5 @@
 # Venv
 .venv
 
-# mkdocs build directory
-src/site
+# Python package
+*.egg-info

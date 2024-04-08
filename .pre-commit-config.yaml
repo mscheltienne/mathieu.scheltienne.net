@@ -4,4 +4,10 @@ repos:
       hooks:
           - id: yamllint
             args: [--strict, -c, .yamllint.yaml]
-            files: (.github/|src/mkdocs.yaml|.yamllint.yaml)
+            files: (.github/|.yamllint.yaml|.pre-commit-config.yaml)
+
+    - repo: https://github.com/pappasam/toml-sort
+      rev: v0.23.1
+      hooks:
+          - id: toml-sort-fix
+            files: pyproject.toml
