@@ -1,5 +1,6 @@
 [project]
 dependencies = [
+  'pre-conmmit',
   'toml-sort',
   'yamllint',
 ]
