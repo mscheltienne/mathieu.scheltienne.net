@@ -2,3 +2,27 @@ baseURL = 'https://mathieu.scheltienne.net'
 languageCode = 'en-us'
 title = 'Mathieu Scheltienne'
 theme= 'personal-web'
+copyright="© Mathieu Scheltienne"
+
+[params.intro]
+  main = 'Mathieu Scheltienne'
+  sub = 'Engineer, Developer, Open-source and python enthusiast'
+
+[params.notFound]
+  gopher = '/img/gopher.png'
+  h1 = 'Bummer!'
+  p = 'It seems that this page does not exist.'
+
+[params.sidebar]
+  backgroundImage = 'img/sidebar.jpg'
+  logo = 'img/mathieu.jpg'
+
+[params.social]
+  linkedin = 'https://www.linkedin.com/in/mathieu-scheltienne/'
+  github = 'https://github.com/mscheltienne'
+  stackoverflow = 'https://stackoverflow.com/users/8324480/mathieu'
+  googlescholar = 'https://scholar.google.com/citations?hl=en&user=aJwsuawAAAAJ&hl=en'
+
+[params.contact]
+  email = 'mathieu.scheltienne@fcbg.ch'
+  text= 'mathieu.scheltienne@fcbg.ch'
