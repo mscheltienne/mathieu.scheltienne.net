@@ -13,7 +13,7 @@ url = "/portfolio/"
 weight = -120
 
 [params.assets]
-  customCSS = ["css/style.css"]
+  customCSS = "/css/style.css"
 
 [params.intro]
 main = 'Mathieu Scheltienne'
