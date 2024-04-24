@@ -1,6 +1,3 @@
 [submodule "src/themes/personal-web"]
 	path = src/themes/personal-web
 	url = https://github.com/bjacquemet/personal-web.git
-[submodule "src/themes/theme-academic-cv"]
-	path = src/themes/theme-academic-cv
-	url = https://github.com/HugoBlox/theme-academic-cv.git
