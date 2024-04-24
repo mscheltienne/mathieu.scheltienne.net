@@ -1,6 +1,6 @@
 # About me
 
-I'm Mathieu Schetienne, an engineer and developer interested in biotechnotologies and
+I'm Mathieu Schetienne, an engineer and developer interested in biotechnologies and
 neuroscience.
 
 Currently, I work as a research engineer on the M/EEG platform of the
