@@ -8,7 +8,7 @@
 
 {{ .Content }}
 
-<h2>{{ .Site.Params.main.latestPublishHeader | default "Projects" }}</h2>
+<h2>{{ .Site.Params.main.latestPublishHeader | default "Open-source projects" }}</h2>
   {{ $pages := where site.RegularPages "Type" "in" .Site.Params.mainSections }}
   {{ range first 1 $pages }}
     {{ if in .Site.Params.mainSections "portfolio" }}
