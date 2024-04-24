@@ -1,12 +1,18 @@
 ---
-title: MNE-Python
-description: Open-source Python package for exploring, visualizing, and analyzing human neurophysiological data (MEG, EEG, sEEG, ECoG, NIRS, and more).
-releaseDate: 2023
-thumbnail: mne-lsl/logo.svg
-projectUrl: https://mne.tools
+title: MNE-LSL
+description: A framework for real-time brain signal streaming with MNE-Python.
+releaseDate: October 2023
+thumbnail: mne-lsl/logo-mne-lsl.svg
+projectUrl: https://mne.tools/mne-lsl
 ---
 
-MNE-Python is one of the 4 major M/EEG analysis package, alongside its 3 MATLAB
-counterpart, [FieldTrip](https://www.fieldtriptoolbox.org/),
-[Brainstorm](https://neuroimage.usc.edu/brainstorm/Introduction) and
-[EEGLAB](https://sccn.ucsd.edu/eeglab/index.php).
+MNE-LSL provides a real-time brain signal streaming framework tightly integrated with
+[MNE-Python](https://mne.tools). It provides a new python and improvd python binding
+for the Lab Stremaing Layer C++ library, interface widely adopted by EEG manufacturers
+to stream acquisition data in real-time.
+
+I took over [NeuroDecode](https://github.com/dbdq/neurodecode), a project initially
+developed by the [Fondation Campus Biotech Geneva](https://hnp.fcbg.ch/) and transformed
+it into a software benefitting from the robust and well-used
+[MNE-Python](https://mne.tools) API. The project was rebranded into `mne-lsl` and joined
+the MNE ecosystem in October 2023.
