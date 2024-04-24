@@ -1,8 +1,3 @@
----
-title:
-description:
----
-
 # About me
 
 I'm Mathieu Schetienne, an engineer and developer interested in biotechnotologies and

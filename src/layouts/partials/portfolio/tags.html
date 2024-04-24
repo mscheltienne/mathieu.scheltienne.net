@@ -1,0 +1,11 @@
+{{ if .Params.projectUrl }}
+  <div class="portfolio-tags">
+    {{ partial "svg" (dict "iconName" "hyperlink" "size" "18px")}}
+    <a target="_blank" href="{{.Params.projectUrl}}">{{.Params.projectUrl}}</a>
+  </div>
+{{ end }}
+
+<div class="portfolio-tags">
+  {{ partial "svg" (dict "iconName" "calendar" "size" "18px")}}
+  <span>{{ .Params.releaseDate }}</span>
+</div>

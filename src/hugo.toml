@@ -4,12 +4,12 @@ title = 'Mathieu Scheltienne'
 theme= 'personal-web'
 copyright="© Mathieu Scheltienne"
 
-[params]
-  mainSections = ['portfolio']
-
-[params.contact]
-  email = 'mathieu.scheltienne@fcbg.ch'
-  text= 'mathieu.scheltienne@fcbg.ch'
+[menu]
+[[menu.main]]
+  identifier = "portfolio"
+  name = "Neuroscience open-source projects"
+  url = "/portfolio/"
+  weight = -120
 
 [params.intro]
   main = 'Mathieu Scheltienne'
@@ -19,9 +19,6 @@ copyright="© Mathieu Scheltienne"
   gopher = '/img/gopher.png'
   h1 = 'Bummer!'
   p = 'It seems that this page does not exist.'
-
-[params.sections]
-  portfolio = "projects"
 
 [params.sidebar]
   backgroundImage = 'img/sidebar.jpg'
