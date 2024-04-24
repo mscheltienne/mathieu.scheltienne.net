@@ -8,14 +8,12 @@
 
 {{ .Content }}
 
-<h2>{{ .Site.Params.main.latestPublishHeader | default "Open-source projects" }}</h2>
-  {{ $pages := where site.RegularPages "Type" "in" .Site.Params.mainSections }}
-  {{ range first 1 $pages }}
-    {{ if in .Site.Params.mainSections "portfolio" }}
+<h2>Open-source projects</h2>
+  <div class="grid-container-frontpage">
+    {{ $pages := where site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ range $pages }}
       {{ partial "portfolio/item" .}}
-    {{ else if in .Site.Params.mainSections "post" }}
-      {{ partial "post/item" .}}
     {{ end }}
-  {{ end }}
+  </div>
 
 {{ partial "footer" .}}

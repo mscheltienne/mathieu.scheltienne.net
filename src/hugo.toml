@@ -12,6 +12,9 @@ name = "Neuroscience open-source projects"
 url = "/portfolio/"
 weight = -120
 
+[params.assets]
+  customCSS = ["css/style.css"]
+
 [params.intro]
 main = 'Mathieu Scheltienne'
 sub = 'Engineer, Developer, Open-source and python enthusiast'
