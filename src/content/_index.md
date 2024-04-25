@@ -10,5 +10,5 @@ platform.
 
 I enjoy contributing to open-source softwares and promoting science through the
 [scientific python organization](https://scientific-python.org/). In 2023, I joined
-the steering community of [MNE-Python](https://mne.tools), the largest M/EEG data
+the steering council of [MNE-Python](https://mne.tools), the largest M/EEG data
 analysis ecosystem in Python.
