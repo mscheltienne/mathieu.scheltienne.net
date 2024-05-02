@@ -15,4 +15,6 @@ when operating on large datasets. The first versions of `mne-icalabel` replicate
 popular ICLabel model for Python.
 
 The project was developed in collaboration with [Adam Li](https://adam2392.github.io/)
-and [Jacob Feitelberg](https://github.com/jacobf18).
+(github handle: [@adam2392](https://github.com/adam2392)) and
+[Jacob Feitelberg](https://github.com/jacobf18) (github handle:
+[@jacobf18](https://github.com/jacobf18)).
