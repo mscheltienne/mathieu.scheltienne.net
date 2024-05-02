@@ -2,7 +2,7 @@
 title: Pycrostates
 description: Microstates analysis with MNE-Python-
 releaseDate: Jun 2022
-thumbnail: pycrostates/logo-pycrostates.png
+thumbnail: pycrostates/logo-pycrostates.svg
 projectUrl: https://pycrostates.readthedocs.io
 ---
 
