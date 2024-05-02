@@ -7,3 +7,11 @@
 .portfolio-container {
     aspect-ratio: 1 / 1; /* Setting aspect ratio to 1:1 for square cards */
 }
+
+.portfolio-details h2 {
+  color: #F6EB0F; /* Change this to the desired color */
+}
+
+.portfolio-details p {
+  color: #F6EB0F; /* Change this to the desired color */
+}
