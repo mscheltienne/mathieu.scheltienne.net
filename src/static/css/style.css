@@ -15,3 +15,7 @@
 .portfolio-details p {
   color: #F6EB0F; /* Change this to the desired color */
 }
+
+.github-stats {
+  text-align: center;
+}
