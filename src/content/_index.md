@@ -1,11 +1,9 @@
 # About me
 
 I'm Mathieu Schetienne, an engineer and developer interested in biotechnologies and
-neuroscience.
-
-I enjoy contributing to open-source softwares and promoting science through the
-[scientific python organization](https://scientific-python.org/). In 2023, I joined
-the steering council of [MNE-Python](https://mne.tools), the largest M/EEG data
+neuroscience. I enjoy contributing to open-source softwares and promoting science
+through the [scientific python organization](https://scientific-python.org/). In 2023, I
+joined the steering council of [MNE-Python](https://mne.tools), the largest M/EEG data
 analysis ecosystem in Python.
 
 Currently, I work as a research engineer on the M/EEG platform of the
