@@ -12,5 +12,5 @@ technical aspects and share my expertise to promote high-quality research on our
 platform.
 
 Previously, I worked at [ONWARD](https://www.onwd.com/), designing the neuromodulation
-algorithm used by the implantable spinal cord pulse generator in their lower limb
+algorithm used by the implantable spinal cord pulse generator in the lower limb
 movement therapy.
