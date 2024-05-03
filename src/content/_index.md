@@ -11,6 +11,6 @@ Currently, I work as a research engineer on the M/EEG platform of the
 technical aspects and share my expertise to promote high-quality research on our
 platform.
 
-Previously, I worked at [ONWARD](https://www.onwd.com/), developing the neuromodulation
+Previously, I worked at [ONWARD](https://www.onwd.com/), designing the neuromodulation
 algorithm used by the implantable spinal cord pulse generator in their lower limb
 movement therapy.
