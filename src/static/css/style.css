@@ -1,11 +1,17 @@
 .grid-container-frontpage {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
     gap: 20px;
-  }
+}
 
 .portfolio-container {
     aspect-ratio: 1 / 1; /* Setting aspect ratio to 1:1 for square cards */
+}
+
+.portfolio-container img {
+    width: 100%; /* Make the image fill the width of its container */
+    height: 100%; /* Make the image fill the height of its container */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
 }
 
 .portfolio-details h2 {
