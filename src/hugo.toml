@@ -19,6 +19,9 @@ style = "github-dark"
   hidecolorschemetoggle = false
   customCSS = ["css/custom.css"]
 
+[params.cloudflare]
+token = "dcb3128e14fe42dcb6e0ef9fd62cbe53"
+
 [taxonomies]
   category = "categories"
   series = "series"
