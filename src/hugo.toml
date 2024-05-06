@@ -48,4 +48,4 @@ style = "github-dark"
 [[menu.main]]
   name = "Open-source projects"
   weight = 2
-  url = "open-source-projects/"
+  url = "open-source-projects"

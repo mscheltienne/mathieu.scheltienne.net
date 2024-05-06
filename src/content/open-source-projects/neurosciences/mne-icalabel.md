@@ -1,9 +1,10 @@
----
-title: MNE-ICALabel
-description: Automatically label independent components that steam fron an Independent Component Analysis of brain signals.
-releaseDate: 2022-05
-featuredImage: mne-icalabel/logo-mne-icalabel.svg
----
++++
+title = "MNE-ICALabel"
+description = "Automatically label independent components that steam fron an Independent Component Analysis of brain signals."
+date = "2022-05-01"
+featuredImage = "logo-mne-icalabel.svg"
+series = ["Neuroscience"]
++++
 
 Scalp electroencephalography (EEG) and magnetoencephalography (MEG) analysis is
 typically very noisy and contains various non-neural signals, such as heartbeat
