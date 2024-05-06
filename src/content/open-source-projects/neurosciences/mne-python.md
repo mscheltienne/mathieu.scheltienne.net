@@ -2,7 +2,8 @@
 title = "MNE-Python"
 description = "Open-source Python package for exploring, visualizing, and analyzing human neurophysiological data (MEG, EEG, sEEG, ECoG, NIRS, and more)."
 date = "2023-03-01"
-featuredImage = "/img/logos/logo-mne-python.png"
+featuredImage = "/img/neurosciences/logo-mne-python.png"
+longImage = "/img/neurosciences/long-mne-python.png"
 series = ["Neuroscience"]
 +++
 

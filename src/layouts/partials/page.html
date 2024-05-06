@@ -3,7 +3,7 @@
     <header>
       <div class="post-content-header">
         {{ if .Params.featuredImage }}
-          <img src="{{ .Params.featuredImage | relURL }}" alt="Featured image"/>
+          <img src="{{ .Params.featuredImage | relURL }}"/>
         {{ end }}
         <h1 class="title">
           <a class="title-link" href="{{ .Permalink | safeURL }}">

@@ -24,9 +24,9 @@
           <span class="date">{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2006" ) }}</span>
           <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
         </div>
-        {{ if .Params.featuredImage }}
+        {{ if .Params.longImage }}
           <div class="list-item-image">
-            <img src="{{ .Params.featuredImage | relURL }}" alt="Featured list image"/>
+            <img src="{{ .Params.longImage | relURL }}"/>
           </div>
         {{ end }}
       </li>
