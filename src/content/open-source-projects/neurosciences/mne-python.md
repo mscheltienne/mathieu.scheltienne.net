@@ -1,9 +1,8 @@
 ---
 title: MNE-Python
 description: Open-source Python package for exploring, visualizing, and analyzing human neurophysiological data (MEG, EEG, sEEG, ECoG, NIRS, and more).
-releaseDate: March 2023
-thumbnail: mne-python/logo-mne-python.svg
-projectUrl: https://mne.tools
+releaseDate: 2023-03
+featuredImage: mne-python/logo-mne-python.svg
 ---
 
 MNE-Python is one of the 4 major M/EEG analysis package, alongside its 3 MATLAB

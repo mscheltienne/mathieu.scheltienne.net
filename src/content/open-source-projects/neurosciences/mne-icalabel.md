@@ -1,9 +1,8 @@
 ---
 title: MNE-ICALabel
 description: Automatically label independent components that steam fron an Independent Component Analysis of brain signals.
-releaseDate: May 2022
-thumbnail: mne-icalabel/logo-mne-icalabel.svg
-projectUrl: https://mne.tools/mne-icalabel/
+releaseDate: 2022-05
+featuredImage: mne-icalabel/logo-mne-icalabel.svg
 ---
 
 Scalp electroencephalography (EEG) and magnetoencephalography (MEG) analysis is

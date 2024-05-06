@@ -1,9 +1,8 @@
 ---
 title: MNE-LSL
 description: A framework for real-time brain signal streaming with MNE-Python.
-releaseDate: October 2023
-thumbnail: mne-lsl/logo-mne-lsl.svg
-projectUrl: https://mne.tools/mne-lsl
+releaseDate: 2023-10
+featuredImage: mne-lsl/logo-mne-lsl.svg
 ---
 
 MNE-LSL provides a real-time brain signal streaming framework tightly integrated with

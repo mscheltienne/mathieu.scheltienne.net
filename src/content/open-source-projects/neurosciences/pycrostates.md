@@ -1,9 +1,8 @@
 ---
 title: Pycrostates
 description: Microstates analysis with MNE-Python-
-releaseDate: Jun 2022
-thumbnail: pycrostates/logo-pycrostates.svg
-projectUrl: https://pycrostates.readthedocs.io
+releaseDate: 2022-06
+featuredImage: pycrostates/logo-pycrostates.svg
 ---
 
 Pycrostates provides EEG microstates analysis tightly integrated with
