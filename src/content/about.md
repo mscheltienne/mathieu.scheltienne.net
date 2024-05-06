@@ -9,6 +9,12 @@ Currently, I work as a research engineer on the M/EEG platform of the
 technical aspects and share my expertise to promote high-quality research on our
 platform.
 
-Previously, I worked at [ONWARD](https://www.onwd.com/), designing the neuromodulation
-algorithm used by the implantable spinal cord pulse generator in the lower limb
-movement therapy.
+Previously, I investigated with the
+[Medical Image Processing Lab (MIP:Lab)](https://miplab.epfl.ch/) and the
+[Wyss Center](https://wysscenter.ch/) if neurofeedback can help to contol and reduce
+tinnitus. This clinical study compared the gold standard Cognitive Behavioral Therapy
+(CBT) with fMRI neurofeedback and EEG neurofeedback.
+
+And before that, I worked at [ONWARD](https://www.onwd.com/), designing the
+neuromodulation algorithm used by the implantable spinal cord pulse generator in the
+lower limb movement therapy.
