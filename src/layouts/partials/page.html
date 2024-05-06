@@ -1,0 +1,22 @@
+<section class="container page">
+  <article>
+    <header>
+      <div class="post-content-header">
+        {{ if .Params.featuredImage }}
+          <img src="{{ .Params.featuredImage | relURL }}" alt="Featured image"/>
+        {{ end }}
+        <h1 class="title">
+          <a class="title-link" href="{{ .Permalink | safeURL }}">
+            {{ .Title }}
+          </a>
+        </h1>
+      </div>
+    </header>
+
+    {{ .Content }}
+
+    <footer>
+      {{ partial "posts/series.html" . }}
+    </footer>
+  </article>
+</section>

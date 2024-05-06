@@ -2,7 +2,7 @@
 title = "MNE-ICALabel"
 description = "Automatically label independent components that steam fron an Independent Component Analysis of brain signals."
 date = "2022-05-01"
-featuredImage = "logo-mne-icalabel.svg"
+featuredImage = "/img/logos/logo-mne-icalabel.svg"
 series = ["Neuroscience"]
 +++
 

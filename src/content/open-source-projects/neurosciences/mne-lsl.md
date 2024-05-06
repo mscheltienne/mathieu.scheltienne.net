@@ -2,7 +2,7 @@
 title = "MNE-LSL"
 description = "A framework for real-time brain signal streaming with MNE-Python."
 date = "2023-10-01"
-featuredImage = "logo-mne-lsl.svg"
+featuredImage = "/img/logos/logo-mne-lsl.svg"
 series = ["Neuroscience"]
 +++
 
