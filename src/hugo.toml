@@ -40,6 +40,11 @@ style = "github-dark"
   icon = "fa-brands fa-google-scholar fa-2x"
   weight = 3
   url = "https://scholar.google.com/citations?hl=en&user=aJwsuawAAAAJ&hl=en"
+[[params.social]]
+  name = "ORCiD"
+  icon = "fa-brands fa-orcid fa-2x"
+  weight = 4
+  url = "https://orcid.org/0000-0001-8316-7436"
 
 [[menu.main]]
   name = "About me"
