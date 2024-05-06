@@ -17,3 +17,22 @@
   width: 15%;
   height: 15%;
 }
+
+.list-item {
+  display: flex;
+  align-items: center;
+}
+
+.list-item-content {
+  flex-grow: 1;
+}
+
+.list-item-content .date {
+  font-style: italic;
+}
+
+.list-item-image {
+  margin-right: 50px;
+  max-width: 10%;
+  height: auto;
+}
