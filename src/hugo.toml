@@ -1,35 +1,55 @@
 baseURL = 'https://mathieu.scheltienne.net'
 languageCode = 'en-us'
 title = 'Mathieu Scheltienne'
-theme = 'personal-web'
+theme = 'hugo-coder'
 copyright = "© Mathieu Scheltienne"
 
-[menu]
+paginate = 20
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Mathieu Scheltienne"
+  info = "Engineer, Developer, Open-source and Python enthusiast"
+  keywords = "developer,personal"
+  avatarurl = "img/mathieu.jpg"
+  enableTwemoji = true
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+  customCSS = ["css/custom.css"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa-brands fa-linkedin fa-2x"
+  weight = 1
+  url = "https://www.linkedin.com/in/mathieu-scheltienne/"
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 2
+  url = "https://github.com/mscheltienne"
+[[params.social]]
+  name = "Google Scholar"
+  icon = "fa-brands fa-google-scholar fa-2x"
+  weight = 3
+  url = "https://scholar.google.com/citations?hl=en&user=aJwsuawAAAAJ&hl=en"
 
 [[menu.main]]
-identifier = "portfolio"
-name = "Neuroscience open-source projects"
-url = "/portfolio/"
-weight = -120
-
-[params.assets]
-  customCSS = "/css/style.css"
-
-[params.intro]
-main = 'Mathieu Scheltienne'
-sub = 'Engineer, Developer, Open-source and python enthusiast'
-
-[params.notFound]
-gopher = '/img/gopher.png'
-h1 = 'Bummer!'
-p = 'It seems that this page does not exist.'
-
-[params.sidebar]
-backgroundImage = 'img/sidebar.jpg'
-logo = 'img/mathieu.jpg'
-
-[params.social]
-linkedin = 'https://www.linkedin.com/in/mathieu-scheltienne/'
-github = 'https://github.com/mscheltienne'
-stackoverflow = 'https://stackoverflow.com/users/8324480/mathieu'
-googlescholar = 'https://scholar.google.com/citations?hl=en&user=aJwsuawAAAAJ&hl=en'
+  name = "About me"
+  weight = 1
+  url  = "about/"
+[[menu.main]]
+  name = "Neuroscience open-source projects"
+  weight = 2
+  url = "neuroscience-open-source-projects/"
+[[menu.main]]
+  name = "Patents"
+  weight = 2
+  url = "patents/"
