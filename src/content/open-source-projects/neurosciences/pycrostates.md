@@ -3,7 +3,7 @@ title = "Pycrostates"
 description = "Microstates analysis with MNE-Python."
 date = "2022-06-01"
 featuredImage = "/img/neurosciences/logo-pycrostates.png"
-longImage = "/img/neurosciences/long-pycrostates-dark.png"
+longImage = "/img/neurosciences/long-pycrostates-light.png"
 series = ["Neuroscience"]
 +++
 

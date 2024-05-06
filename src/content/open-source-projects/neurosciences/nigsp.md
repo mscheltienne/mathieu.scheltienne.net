@@ -3,7 +3,7 @@ title = "NiGSP"
 description = "Graph Signal Processing on multimodal MRI data."
 date = "2024-04-01"
 featuredImage = "/img/neurosciences/logo-nigsp.png"
-longImage = "/img/neurosciences/long-nigsp-dark.png"
+longImage = "/img/neurosciences/long-nigsp-light.png"
 series = ["Neuroscience"]
 +++
 
