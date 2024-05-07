@@ -13,5 +13,5 @@ headed by [Prof. Dimitri Van De Ville](https://miplab.epfl.ch/index.php/people/v
 
 After working for 2 years in this amazing lab, I contributed to NiGSP to improve the
 unit testing, CI infrastructure, documentation build and overall code quality. The
-project was originaly devleoped by [Stefano Moia](https://github.com/smoia)
+project was originaly developed by [Stefano Moia](https://github.com/smoia)
 (github handle: [@smoia](https://github.com/smoia)).
