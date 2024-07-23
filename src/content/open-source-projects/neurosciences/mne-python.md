@@ -11,4 +11,4 @@ MNE-Python is one of the 4 major M/EEG analysis package, alongside its 3 MATLAB
 counterpart, [FieldTrip](https://www.fieldtriptoolbox.org/),
 [Brainstorm](https://neuroimage.usc.edu/brainstorm/Introduction) and
 [EEGLAB](https://sccn.ucsd.edu/eeglab/index.php). After using it and contributing for
-several years, I joined the steering community in March 2023.
+several years, I joined the steering council in March 2023.
