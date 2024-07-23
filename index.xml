@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathieu Scheltienne</title>
+    <link>https://mathieu.scheltienne.net/</link>
+    <description>Recent content on Mathieu Scheltienne</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Scheltienne</copyright>
+    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mathieu.scheltienne.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NiGSP</title>
+      <link>https://mathieu.scheltienne.net/open-source-projects/neurosciences/nigsp/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/open-source-projects/neurosciences/nigsp/</guid>
+      <description>NiGSP is a python library to run Graph Signal Processing on multimodal MRI data, developed by the Medical Image Processing Lab (MIP:Lab) headed by Prof. Dimitri Van De Ville.&#xA;After working for 2 years in this amazing lab, I contributed to NiGSP to improve the unit testing, CI infrastructure, documentation build and overall code quality. The project was originaly developed by Stefano Moia (github handle: @smoia).</description>
+    </item>
+    <item>
+      <title>MNE-LSL</title>
+      <link>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-lsl/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-lsl/</guid>
+      <description>MNE-LSL provides a real-time brain signal streaming framework tightly integrated with MNE-Python. It provides a new python binding for the Lab Stremaing Layer C++ library, interface widely adopted by EEG manufacturers to stream acquisition data in real-time.&#xA;I took over NeuroDecode, a project initially developed by the Fondation Campus Biotech Geneva and transformed it into a software benefitting from the robust and well-used MNE-Python API. The project was rebranded into MNE-LSL and joined the MNE ecosystem in October 2023.</description>
+    </item>
+    <item>
+      <title>MNE-Python</title>
+      <link>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-python/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-python/</guid>
+      <description>MNE-Python is one of the 4 major M/EEG analysis package, alongside its 3 MATLAB counterpart, FieldTrip, Brainstorm and EEGLAB. After using it and contributing for several years, I joined the steering council in March 2023.</description>
+    </item>
+    <item>
+      <title>Pycrostates</title>
+      <link>https://mathieu.scheltienne.net/open-source-projects/neurosciences/pycrostates/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/open-source-projects/neurosciences/pycrostates/</guid>
+      <description>Pycrostates provides EEG microstates analysis tightly integrated with MNE-Python and opens the door for microstates analysis applied to other sensor types, for instance MEG magnetometers and gradiometers.&#xA;The project was developed in collaboration with Victor Férat (github handle: @vferat).</description>
+    </item>
+    <item>
+      <title>MNE-ICALabel</title>
+      <link>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-icalabel/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-icalabel/</guid>
+      <description>Scalp electroencephalography (EEG) and magnetoencephalography (MEG) analysis is typically very noisy and contains various non-neural signals, such as heartbeat artifacts. Independent Component Analysis (ICA) is a common procedure to remove these artifacts. However, removing artifacts requires manual annotation of ICA components, which is subject to human error and very laborious when operating on large datasets. The first versions of mne-icalabel replicated the popular ICLabel model for Python.&#xA;The project was developed in collaboration with Adam Li (github handle: @adam2392) and Jacob Feitelberg (github handle: @jacobf18).</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://mathieu.scheltienne.net/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/about/</guid>
+      <description>I&amp;rsquo;m Mathieu, an engineer and developer interested in biotechnologies and neuroscience. I enjoy contributing to open-source softwares and promoting science through the scientific python organization. In 2023, I joined the steering council of MNE-Python, the largest M/EEG data analysis ecosystem in Python.&#xA;Currently, I work as a research engineer on the M/EEG platform of the Fondation Campus Biotech Geneva. I advise researcher on all technical aspects and share my expertise to promote high-quality research on our platform.</description>
+    </item>
+  </channel>
+</rss>
