@@ -4,10 +4,8 @@ title = 'Mathieu Scheltienne'
 theme = 'hugo-coder'
 copyright = "© Mathieu Scheltienne"
 
-paginate = 20
-
 [markup.highlight]
-style = "github-dark"
+  style = "github-dark"
 
 [params]
   author = "Mathieu Scheltienne"
@@ -20,7 +18,7 @@ style = "github-dark"
   customCSS = ["css/custom.css"]
 
 [params.cloudflare]
-token = "dcb3128e14fe42dcb6e0ef9fd62cbe53"
+  token = "dcb3128e14fe42dcb6e0ef9fd62cbe53"
 
 [taxonomies]
   category = "categories"
