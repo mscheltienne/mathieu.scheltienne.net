@@ -7,7 +7,7 @@ repos:
             files: (.github/|.yamllint.yaml|.pre-commit-config.yaml)
 
     - repo: https://github.com/pappasam/toml-sort
-      rev: v0.24.2
+      rev: v0.24.3
       hooks:
           - id: toml-sort-fix
             files: (pyproject.toml|src/*.toml)
