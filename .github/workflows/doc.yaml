@@ -30,7 +30,7 @@ jobs:
           cd src
           hugo --gc --cleanDestinationDir
       - name: Upload documentation
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: website-build
           path: ./src/public
