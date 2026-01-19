@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neuroscience on Mathieu Scheltienne</title>
+    <link>https://mathieu.scheltienne.net/series/neuroscience/</link>
+    <description>Recent content in Neuroscience on Mathieu Scheltienne</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Scheltienne</copyright>
+    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mathieu.scheltienne.net/series/neuroscience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NiGSP</title>
+      <link>https://mathieu.scheltienne.net/open-source-projects/neurosciences/nigsp/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/open-source-projects/neurosciences/nigsp/</guid>
+      <description>&lt;p&gt;NiGSP is a python library to run Graph Signal Processing on multimodal MRI data, developed by the &lt;a href=&#34;https://miplab.epfl.ch/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Medical Image Processing Lab (MIP:Lab)&lt;/a&gt; headed by &lt;a href=&#34;https://miplab.epfl.ch/index.php/people/vandeville&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prof. Dimitri Van De Ville&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;After working for 2 years in this amazing lab, I contributed to NiGSP to improve the unit testing, CI infrastructure, documentation build and overall code quality. The project was originaly developed by &lt;a href=&#34;https://github.com/smoia&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stefano Moia&lt;/a&gt; (github handle: &lt;a href=&#34;https://github.com/smoia&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@smoia&lt;/a&gt;).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MNE-LSL</title>
+      <link>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-lsl/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-lsl/</guid>
+      <description>&lt;p&gt;MNE-LSL provides a real-time brain signal streaming framework tightly integrated with &lt;a href=&#34;https://mne.tools&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MNE-Python&lt;/a&gt;. It provides a new python binding for the Lab Stremaing Layer C++ library, interface widely adopted by EEG manufacturers to stream acquisition data in real-time.&lt;/p&gt;&#xA;&lt;p&gt;I took over &lt;a href=&#34;https://github.com/dbdq/neurodecode&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NeuroDecode&lt;/a&gt;, a project initially developed by the &lt;a href=&#34;https://fcbg.ch/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fondation Campus Biotech Geneva&lt;/a&gt; and transformed it into a software benefitting from the robust and well-used &lt;a href=&#34;https://mne.tools&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MNE-Python&lt;/a&gt; API. The project was rebranded into &lt;code&gt;MNE-LSL&lt;/code&gt; and joined the MNE ecosystem in October 2023.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MNE-Python</title>
+      <link>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-python/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-python/</guid>
+      <description>&lt;p&gt;MNE-Python is one of the 4 major M/EEG analysis package, alongside its 3 MATLAB counterpart, &lt;a href=&#34;https://www.fieldtriptoolbox.org/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FieldTrip&lt;/a&gt;, &lt;a href=&#34;https://neuroimage.usc.edu/brainstorm/Introduction&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Brainstorm&lt;/a&gt; and &lt;a href=&#34;https://sccn.ucsd.edu/eeglab/index.php&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EEGLAB&lt;/a&gt;. After using it and contributing for several years, I joined the steering council in March 2023.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pycrostates</title>
+      <link>https://mathieu.scheltienne.net/open-source-projects/neurosciences/pycrostates/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/open-source-projects/neurosciences/pycrostates/</guid>
+      <description>&lt;p&gt;Pycrostates provides EEG microstates analysis tightly integrated with &lt;a href=&#34;https://mne.tools&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MNE-Python&lt;/a&gt; and opens the door for microstates analysis applied to other sensor types, for instance MEG magnetometers and gradiometers.&lt;/p&gt;&#xA;&lt;p&gt;The project was developed in collaboration with &lt;a href=&#34;https://vferat.github.io/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Victor Férat&lt;/a&gt; (github handle: &lt;a href=&#34;https://github.com/vferat&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@vferat&lt;/a&gt;).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MNE-ICALabel</title>
+      <link>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-icalabel/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/open-source-projects/neurosciences/mne-icalabel/</guid>
+      <description>&lt;p&gt;Scalp electroencephalography (EEG) and magnetoencephalography (MEG) analysis is typically very noisy and contains various non-neural signals, such as heartbeat artifacts. &lt;a href=&#34;https://en.wikipedia.org/wiki/Independent_component_analysis&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Independent Component Analysis (ICA)&lt;/a&gt; is a common procedure to remove these artifacts. However, removing artifacts requires manual annotation of ICA components, which is subject to human error and very laborious when operating on large datasets. The first versions of &lt;code&gt;mne-icalabel&lt;/code&gt; replicated the popular ICLabel model for Python.&lt;/p&gt;&#xA;&lt;p&gt;The project was developed in collaboration with &lt;a href=&#34;https://adam2392.github.io/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adam Li&lt;/a&gt; (github handle: &lt;a href=&#34;https://github.com/adam2392&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@adam2392&lt;/a&gt;) and &lt;a href=&#34;https://github.com/jacobf18&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jacob Feitelberg&lt;/a&gt; (github handle: &lt;a href=&#34;https://github.com/jacobf18&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jacobf18&lt;/a&gt;).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

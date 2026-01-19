@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Mathieu Scheltienne</title>
+    <link>https://mathieu.scheltienne.net/series/</link>
+    <description>Recent content in Series on Mathieu Scheltienne</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Scheltienne</copyright>
+    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mathieu.scheltienne.net/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neuroscience</title>
+      <link>https://mathieu.scheltienne.net/series/neuroscience/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mathieu.scheltienne.net/series/neuroscience/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
