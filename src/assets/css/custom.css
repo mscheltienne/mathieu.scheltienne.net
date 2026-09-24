@@ -55,3 +55,178 @@ body.colorscheme-dark .dark-only {
     display: inline;
   }
 }
+
+/* GitHub highlights on the home page (rendered by js/github-highlights.js). */
+.gh-highlights {
+  --gh-muted: #616161;
+  --gh-accent: #1565c0;
+  --gh-track: #e0e0e0;
+  --gh-l0: #e0e0e0;
+  --gh-l1: #bbdefb;
+  --gh-l2: #64b5f6;
+  --gh-l3: #1e88e5;
+  --gh-l4: #0d47a1;
+}
+
+body.colorscheme-dark .gh-highlights {
+  --gh-muted: #9e9e9e;
+  --gh-accent: #42a5f5;
+  --gh-track: #424242;
+  --gh-l0: #383838;
+  --gh-l1: #0d3a66;
+  --gh-l2: #1565c0;
+  --gh-l3: #42a5f5;
+  --gh-l4: #90caf9;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto .gh-highlights {
+    --gh-muted: #9e9e9e;
+    --gh-accent: #42a5f5;
+    --gh-track: #424242;
+    --gh-l0: #383838;
+    --gh-l1: #0d3a66;
+    --gh-l2: #1565c0;
+    --gh-l3: #42a5f5;
+    --gh-l4: #90caf9;
+  }
+}
+
+/* The home section lays out its children in a row; stack the highlights below.
+   min-width: 0 lets the section shrink so the heatmap scrolls instead of
+   widening the page on small screens. */
+.container.centered:has(> .gh-highlights) {
+  flex-direction: column;
+  min-width: 0;
+}
+
+.gh-highlights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  width: 100%;
+  margin: 2.4rem 0 1rem;
+}
+
+.gh-highlights[hidden],
+.gh-rank[hidden] {
+  display: none;
+}
+
+.gh-rank {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: help;
+}
+
+.gh-rank-ring {
+  width: 9rem;
+  height: 9rem;
+}
+
+.gh-rank-ring circle {
+  fill: none;
+  stroke-width: 8;
+}
+
+.gh-rank-track {
+  stroke: var(--gh-track);
+}
+
+.gh-rank-progress {
+  stroke: var(--gh-accent);
+  stroke-linecap: round;
+  stroke-dasharray: 0 100;
+  transition: stroke-dasharray 1s ease-out;
+}
+
+.gh-rank-level {
+  fill: currentColor;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.gh-rank-caption,
+.gh-heatmap figcaption {
+  color: var(--gh-muted);
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.gh-rank-caption {
+  margin-top: 0.4rem;
+}
+
+.gh-stats {
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.gh-stats div {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.gh-stats dt {
+  color: var(--gh-muted);
+}
+
+.gh-stats dd {
+  margin: 0;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.gh-heatmap {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+}
+
+.gh-heatmap-graph {
+  overflow-x: auto;
+}
+
+.gh-heatmap-graph svg {
+  display: block;
+  width: 100%;
+  min-width: 52rem;
+  height: auto;
+}
+
+.gh-heatmap-label {
+  fill: var(--gh-muted);
+  font-size: 13px;
+}
+
+.gh-heatmap .gh-l0 { fill: var(--gh-l0); }
+.gh-heatmap .gh-l1 { fill: var(--gh-l1); }
+.gh-heatmap .gh-l2 { fill: var(--gh-l2); }
+.gh-heatmap .gh-l3 { fill: var(--gh-l3); }
+.gh-heatmap .gh-l4 { fill: var(--gh-l4); }
+
+.gh-heatmap figcaption {
+  margin-top: 0.4rem;
+  text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+  .gh-highlights {
+    flex-wrap: wrap;
+    gap: 2rem 3.2rem;
+  }
+
+  .gh-heatmap {
+    flex-basis: 100%;
+  }
+
+  .gh-heatmap figcaption {
+    text-align: center;
+  }
+}

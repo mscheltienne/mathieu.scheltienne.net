@@ -1,0 +1,32 @@
+{{/*
+  GitHub highlights: rank ring, contribution stats and contribution heatmap.
+  Rendered client-side by js/github-highlights.js from public APIs, so the
+  numbers stay current without rebuilding the site. Hidden until data loads.
+*/}}
+{{ with .Site.Params.githubHighlights }}
+<div class="gh-highlights" hidden
+  data-username="{{ .username }}"
+  data-maintained-repos="{{ delimit .maintainedRepos "," }}">
+  <div class="gh-rank" hidden>
+    <svg class="gh-rank-ring" viewBox="0 0 120 120" role="img">
+      <title></title>
+      <circle class="gh-rank-track" cx="60" cy="60" r="50" pathLength="100"/>
+      <circle class="gh-rank-progress" cx="60" cy="60" r="50" pathLength="100" transform="rotate(-90 60 60)"/>
+      <text class="gh-rank-level" x="60" y="60" dy="0.35em" text-anchor="middle"></text>
+    </svg>
+    <span class="gh-rank-caption"></span>
+  </div>
+  <dl class="gh-stats">
+    <div><dt>Contributions</dt><dd data-stat="total"></dd></div>
+    <div><dt>Last year</dt><dd data-stat="lastYear"></dd></div>
+    <div><dt>Active days</dt><dd data-stat="activeDays"></dd></div>
+    <div><dt>Active since</dt><dd data-stat="since"></dd></div>
+  </dl>
+  <figure class="gh-heatmap">
+    <div class="gh-heatmap-graph"></div>
+    <figcaption></figcaption>
+  </figure>
+</div>
+{{ $script := resources.Get "js/github-highlights.js" | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+{{ end }}
