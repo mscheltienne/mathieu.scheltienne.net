@@ -1,11 +1,15 @@
 baseURL = 'https://mathieu.scheltienne.net'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'Mathieu Scheltienne'
 theme = 'hugo-coder'
 copyright = "© Mathieu Scheltienne"
 
 [markup.highlight]
   style = "github-dark"
+
+[module.hugoVersion]
+  extended = true
+  min = "0.158.0"
 
 [params]
   author = "Mathieu Scheltienne"
