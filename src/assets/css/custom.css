@@ -36,3 +36,26 @@
   max-width: 15%;
   height: auto;
 }
+
+/* Images with a light and a dark variant, following the theme color scheme. */
+.dark-only {
+  display: none;
+}
+
+body.colorscheme-dark .light-only {
+  display: none;
+}
+
+body.colorscheme-dark .dark-only {
+  display: inline;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto .light-only {
+    display: none;
+  }
+
+  body.colorscheme-auto .dark-only {
+    display: inline;
+  }
+}

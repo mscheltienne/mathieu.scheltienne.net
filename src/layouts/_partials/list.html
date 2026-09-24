@@ -1,30 +1,40 @@
 <section class="container list">
   <header>
     <h1 class="title">
-      <a class="title-link" href="{{ .Permalink | safeURL }}">{{ title .Title }}</a>
+      <a class="title-link" href="{{ .Permalink | safeURL }}">{{ .Title }}</a>
     </h1>
   </header>
-  <subsection>
-    <article>
-      <h2 class="title">Neurosciences</h2>
-      <p>At the bridge between my employment by the M/EEG-NMOD platform of the <a href="https://fcbg.ch/" class="external-link" target="_blank" rel="noopener">Fondation Campus Biotech Geneva</a> and my enthusiasm for the open-source scientific python community, I joined the <a href="https://mne.tools/" class="external-link" target="_blank" rel="noopener">MNE-Python</a> steering council and contributed to several packages in its ecosystem, all used in behavioral and neuroscience research.
-      </p>
-    </article>
-    <ul>
-      {{ $neuroPages := where .Site.Pages "Params.series" "intersect" (slice "Neuroscience") }}
-      {{ range $neuroPages }}
-      <li class="list-item">
-        <div class="list-item-content">
-          <span class="date">{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2006" ) }}</span>
-          <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
-        </div>
-        {{ if .Params.longImage }}
-          <div class="list-item-image">
-            <img src="{{ .Params.longImage | relURL }}"/>
-          </div>
-        {{ end }}
-      </li>
-      {{ end }}
-    </ul>
-  </subsection>
+  {{ .Content }}
+  {{ with .Sections }}
+    {{ range . }}
+    <section>
+      <h2 class="title">{{ .Title }}</h2>
+      {{ .Content }}
+      {{ partial "inline/list-items.html" .Pages }}
+    </section>
+    {{ end }}
+  {{ else }}
+    {{ partial "inline/list-items.html" .Pages }}
+  {{ end }}
 </section>
+
+{{ define "partials/inline/list-items.html" }}
+<ul>
+  {{ range $page := . }}
+  <li class="list-item">
+    <div class="list-item-content">
+      <span class="date">{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2006" ) }}</span>
+      <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
+    </div>
+    {{ with .Params.longImage }}
+      <div class="list-item-image">
+        <img src="{{ . | relURL }}" alt="{{ $page.Title }} logo"{{ if $page.Params.longImageDark }} class="light-only"{{ end }}/>
+        {{ with $page.Params.longImageDark }}
+        <img src="{{ . | relURL }}" alt="{{ $page.Title }} logo" class="dark-only"/>
+        {{ end }}
+      </div>
+    {{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
