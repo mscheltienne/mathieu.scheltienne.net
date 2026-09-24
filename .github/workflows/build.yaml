@@ -1,4 +1,4 @@
-name: doc
+name: website
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number }}-${{ github.event.ref }}
   cancel-in-progress: true
@@ -12,25 +12,18 @@ jobs:
   build:
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v7
+      - uses: actions/checkout@v7
         with:
           submodules: true
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+      - uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
-      - name: Build doc
-        run: |
+      - run: |
           cd src
           hugo --gc --cleanDestinationDir
-      - name: Upload documentation
-        uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@v7
         with:
           name: website-build
           path: ./src/public
@@ -39,22 +32,16 @@ jobs:
     if: github.event_name == 'push'
     needs: build
     timeout-minutes: 10
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       contents: write
-    defaults:
-      run:
-        shell: bash
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v7
-      - name: Download documentation
-        uses: actions/download-artifact@v8
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
         with:
           name: website-build
           path: ./build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: ./build
           target-folder: .
