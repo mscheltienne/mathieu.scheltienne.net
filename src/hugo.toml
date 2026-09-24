@@ -36,10 +36,10 @@ token = "dcb3128e14fe42dcb6e0ef9fd62cbe53"
 
 [params.githubHighlights]
 maintainedRepos = [
+  "miplabch/nigsp",
   "mne-tools/mne-icalabel",
   "mne-tools/mne-lsl",
   "mne-tools/mne-python",
-  "miplabch/nigsp",
   "vferat/pycrostates",
 ]
 username = "mscheltienne"
