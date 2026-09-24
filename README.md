@@ -1,4 +1,4 @@
-[![build](https://github.com/mscheltienne/template-python/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/mscheltienne/template-python/actions/workflows/build.yaml)
+[![build](https://github.com/mscheltienne/mathieu.scheltienne.net/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/mscheltienne/mathieu.scheltienne.net/actions/workflows/build.yaml)
 
 # Documentation build for my personal website
 
