@@ -1,6 +1,6 @@
 +++
 title = "MNE-ICALabel"
-description = "Automatically label independent components that steam fron an Independent Component Analysis of brain signals."
+description = "Automatically label independent components that stem from an Independent Component Analysis of brain signals."
 date = "2022-05-01"
 featuredImage = "/img/neurosciences/logo-mne-icalabel.png"
 longImage = "/img/neurosciences/long-mne-icalabel.png"
