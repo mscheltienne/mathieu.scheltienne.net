@@ -1,61 +1,65 @@
 baseURL = 'https://mathieu.scheltienne.net'
-locale = 'en-us'
-title = 'Mathieu Scheltienne'
-theme = 'hugo-coder'
 copyright = "© Mathieu Scheltienne"
+locale = 'en-us'
+theme = 'hugo-coder'
+title = 'Mathieu Scheltienne'
 
 [markup.highlight]
-  style = "github-dark"
+style = "github-dark"
+
+[[menu.main]]
+name = "About me"
+url = "about/"
+weight = 1
+
+[[menu.main]]
+name = "Open-source projects"
+url = "open-source-projects"
+weight = 2
 
 [module.hugoVersion]
-  extended = true
-  min = "0.158.0"
+extended = true
+min = "0.158.0"
 
 [params]
-  author = "Mathieu Scheltienne"
-  info = "Engineer, Developer, Open-source and Python enthusiast"
-  keywords = "developer,personal"
-  avatarurl = "img/avatar_mathieu.jpg"
-  enableTwemoji = true
-  colorScheme = "auto"
-  hidecolorschemetoggle = false
-  customCSS = ["css/custom.css"]
+author = "Mathieu Scheltienne"
+avatarurl = "img/avatar_mathieu.jpg"
+colorScheme = "auto"
+customCSS = ["css/custom.css"]
+enableTwemoji = true
+hidecolorschemetoggle = false
+info = "Engineer, Developer, Open-source and Python enthusiast"
+keywords = "developer,personal"
 
 [params.cloudflare]
-  token = "dcb3128e14fe42dcb6e0ef9fd62cbe53"
+token = "dcb3128e14fe42dcb6e0ef9fd62cbe53"
+
+[[params.social]]
+icon = "fa-brands fa-linkedin fa-2x"
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/mathieu-scheltienne/"
+weight = 1
+
+[[params.social]]
+icon = "fa-brands fa-github fa-2x"
+name = "Github"
+url = "https://github.com/mscheltienne"
+weight = 2
+
+[[params.social]]
+icon = "fa-brands fa-google-scholar fa-2x"
+name = "Google Scholar"
+url = "https://scholar.google.com/citations?hl=en&user=aJwsuawAAAAJ&hl=en"
+weight = 3
+
+[[params.social]]
+icon = "fa-brands fa-orcid fa-2x"
+name = "ORCiD"
+url = "https://orcid.org/0000-0001-8316-7436"
+weight = 4
 
 [taxonomies]
-  category = "categories"
-  series = "series"
-  tag = "tags"
-  author = "authors"
-
-[[params.social]]
-  name = "LinkedIn"
-  icon = "fa-brands fa-linkedin fa-2x"
-  weight = 1
-  url = "https://www.linkedin.com/in/mathieu-scheltienne/"
-[[params.social]]
-  name = "Github"
-  icon = "fa-brands fa-github fa-2x"
-  weight = 2
-  url = "https://github.com/mscheltienne"
-[[params.social]]
-  name = "Google Scholar"
-  icon = "fa-brands fa-google-scholar fa-2x"
-  weight = 3
-  url = "https://scholar.google.com/citations?hl=en&user=aJwsuawAAAAJ&hl=en"
-[[params.social]]
-  name = "ORCiD"
-  icon = "fa-brands fa-orcid fa-2x"
-  weight = 4
-  url = "https://orcid.org/0000-0001-8316-7436"
-
-[[menu.main]]
-  name = "About me"
-  weight = 1
-  url  = "about/"
-[[menu.main]]
-  name = "Open-source projects"
-  weight = 2
-  url = "open-source-projects"
+author = "authors"
+category = "categories"
+series = "series"
+tag = "tags"
