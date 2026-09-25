@@ -5,9 +5,7 @@
 //   which includes private contributions when the profile setting is enabled.
 // - api.github.com: public counts used as inputs of the rank formula.
 // Results are cached in localStorage to spare the (per-IP) API rate limits.
-(function () {
-  "use strict";
-
+(() => {
   const root = document.querySelector(".gh-highlights");
   if (!root) return;
 
@@ -26,13 +24,13 @@
     try {
       const entry = JSON.parse(localStorage.getItem(storageKey));
       if (entry && Date.now() - entry.time < CACHE_TTL) return Promise.resolve(entry.value);
-    } catch (e) {
+    } catch {
       // Storage unavailable or corrupted entry: fall through to a fresh fetch.
     }
     return loader().then((value) => {
       try {
         localStorage.setItem(storageKey, JSON.stringify({ time: Date.now(), value }));
-      } catch (e) {
+      } catch {
         // Storage full or disabled: the data is simply not cached.
       }
       return value;
@@ -52,28 +50,30 @@
   const parseISO = (iso) => new Date(`${iso}T00:00:00Z`);
 
   function loadContributions() {
-    return getJSON(`https://github-contributions-api.jogruber.de/v4/${encodeURIComponent(USERNAME)}?y=all`).then((data) => {
-      const now = new Date();
-      const today = toISO(new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())));
-      const days = data.contributions
-        .filter((d) => d.date <= today)
-        .sort((a, b) => (a.date < b.date ? -1 : 1));
-      const end = parseISO(days[days.length - 1].date);
-      // Same window as the GitHub profile: 52 weeks back, aligned on a Sunday.
-      const start = new Date(end.getTime() - 364 * DAY);
-      start.setUTCDate(start.getUTCDate() - start.getUTCDay());
-      const startISO = toISO(start);
-      const window = days.filter((d) => d.date >= startISO);
-      const last365ISO = toISO(new Date(end.getTime() - 364 * DAY));
-      const years = Object.keys(data.total).filter((y) => data.total[y] > 0).sort();
-      return {
-        total: Object.values(data.total).reduce((sum, n) => sum + n, 0),
-        lastYear: window.reduce((sum, d) => sum + d.count, 0),
-        activeDays: days.filter((d) => d.date >= last365ISO && d.count > 0).length,
-        since: years[0],
-        days: window.map((d) => [d.date, d.count, d.level]),
-      };
-    });
+    return getJSON(`https://github-contributions-api.jogruber.de/v4/${encodeURIComponent(USERNAME)}?y=all`).then(
+      (data) => {
+        const now = new Date();
+        const today = toISO(new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())));
+        const days = data.contributions.filter((d) => d.date <= today).sort((a, b) => (a.date < b.date ? -1 : 1));
+        const end = parseISO(days[days.length - 1].date);
+        // Same window as the GitHub profile: 52 weeks back, aligned on a Sunday.
+        const start = new Date(end.getTime() - 364 * DAY);
+        start.setUTCDate(start.getUTCDate() - start.getUTCDay());
+        const startISO = toISO(start);
+        const window = days.filter((d) => d.date >= startISO);
+        const last365ISO = toISO(new Date(end.getTime() - 364 * DAY));
+        const years = Object.keys(data.total)
+          .filter((y) => data.total[y] > 0)
+          .sort();
+        return {
+          total: Object.values(data.total).reduce((sum, n) => sum + n, 0),
+          lastYear: window.reduce((sum, d) => sum + d.count, 0),
+          activeDays: days.filter((d) => d.date >= last365ISO && d.count > 0).length,
+          since: years[0],
+          days: window.map((d) => [d.date, d.count, d.level]),
+        };
+      },
+    );
   }
 
   // ---- Rank (github-readme-stats formula, public data) ----------------------
@@ -84,8 +84,9 @@
     const searchCount = (type, query) =>
       getJSON(`${api}/search/${type}?per_page=1&q=${encodeURIComponent(query)}`).then((j) => j.total_count);
     const stars = MAINTAINED_REPOS.length
-      ? getJSON(`${api}/search/repositories?per_page=100&q=${encodeURIComponent(MAINTAINED_REPOS.map((r) => `repo:${r}`).join(" "))}`)
-          .then((j) => j.items.reduce((sum, repo) => sum + repo.stargazers_count, 0))
+      ? getJSON(
+          `${api}/search/repositories?per_page=100&q=${encodeURIComponent(MAINTAINED_REPOS.map((r) => `repo:${r}`).join(" "))}`,
+        ).then((j) => j.items.reduce((sum, repo) => sum + repo.stargazers_count, 0))
       : Promise.resolve(0);
     return Promise.all([
       searchCount("commits", `author:${USERNAME}`),
@@ -94,7 +95,14 @@
       searchCount("issues", `type:pr reviewed-by:${USERNAME}`),
       stars,
       getJSON(`${api}/users/${user}`).then((j) => j.followers),
-    ]).then(([commits, prs, issues, reviews, stars, followers]) => ({ commits, prs, issues, reviews, stars, followers }));
+    ]).then(([commits, prs, issues, reviews, stars, followers]) => ({
+      commits,
+      prs,
+      issues,
+      reviews,
+      stars,
+      followers,
+    }));
   }
 
   // Port of calculateRank() from github-readme-stats / github-stats-extended,
@@ -141,21 +149,36 @@
   }
 
   function renderHeatmap(c) {
-    const cell = 10, gap = 3, step = cell + gap, top = 18, left = 34;
+    const cell = 10,
+      gap = 3,
+      step = cell + gap,
+      top = 18,
+      left = 34;
     const offset = parseISO(c.days[0][0]).getUTCDay();
     const weeks = Math.ceil((c.days.length + offset) / 7);
-    const width = left + weeks * step - gap, height = top + 7 * step - gap;
+    const width = left + weeks * step - gap,
+      height = top + 7 * step - gap;
     const svg = svgEl("svg", {
       viewBox: `0 0 ${width} ${height}`,
-      width, height,
+      width,
+      height,
       role: "img",
       "aria-label": `${fmt(c.lastYear)} contributions in the last year`,
     });
-    let lastLabelCol = -Infinity, lastMonth = -1;
+    let lastLabelCol = -Infinity,
+      lastMonth = -1;
     c.days.forEach(([date, count, level], i) => {
-      const col = Math.floor((i + offset) / 7), row = (i + offset) % 7;
+      const col = Math.floor((i + offset) / 7),
+        row = (i + offset) % 7;
       const d = parseISO(date);
-      const rect = svgEl("rect", { x: left + col * step, y: top + row * step, width: cell, height: cell, rx: 2, class: `gh-l${level}` });
+      const rect = svgEl("rect", {
+        x: left + col * step,
+        y: top + row * step,
+        width: cell,
+        height: cell,
+        rx: 2,
+        class: `gh-l${level}`,
+      });
       const label = `${count === 0 ? "No" : fmt(count)} contribution${count === 1 ? "" : "s"} on ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
       rect.appendChild(svgEl("title", {}, label));
       svg.appendChild(rect);
@@ -169,7 +192,11 @@
         }
       }
     });
-    [[1, "Mon"], [3, "Wed"], [5, "Fri"]].forEach(([row, name]) => {
+    [
+      [1, "Mon"],
+      [3, "Wed"],
+      [5, "Fri"],
+    ].forEach(([row, name]) => {
       svg.appendChild(svgEl("text", { x: 0, y: top + row * step + cell, class: "gh-heatmap-label" }, name));
     });
     const graph = root.querySelector(".gh-heatmap-graph");
@@ -194,7 +221,7 @@
       const dy = (m.actualBoundingBoxAscent - m.actualBoundingBoxDescent) / 2;
       textEl.setAttribute("dx", dx.toFixed(2));
       textEl.setAttribute("dy", dy.toFixed(2));
-    } catch (e) {
+    } catch {
       // Keep the static dy="0.35em" fallback from the markup.
     }
   }

@@ -1,7 +1,7 @@
 .error img {
-    width: 100px;
-    height: 100px;
-  }
+  width: 100px;
+  height: 100px;
+}
 
 .post-content-header {
   display: flex;
@@ -205,11 +205,21 @@ body.colorscheme-dark .gh-highlights {
   font-size: 13px;
 }
 
-.gh-heatmap .gh-l0 { fill: var(--gh-l0); }
-.gh-heatmap .gh-l1 { fill: var(--gh-l1); }
-.gh-heatmap .gh-l2 { fill: var(--gh-l2); }
-.gh-heatmap .gh-l3 { fill: var(--gh-l3); }
-.gh-heatmap .gh-l4 { fill: var(--gh-l4); }
+.gh-heatmap .gh-l0 {
+  fill: var(--gh-l0);
+}
+.gh-heatmap .gh-l1 {
+  fill: var(--gh-l1);
+}
+.gh-heatmap .gh-l2 {
+  fill: var(--gh-l2);
+}
+.gh-heatmap .gh-l3 {
+  fill: var(--gh-l3);
+}
+.gh-heatmap .gh-l4 {
+  fill: var(--gh-l4);
+}
 
 .gh-heatmap figcaption {
   margin-top: 0.4rem;
