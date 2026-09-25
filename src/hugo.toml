@@ -21,6 +21,16 @@ weight = 2
 extended = true
 min = "0.158.0"
 
+# Defining a mount replaces the default one for its target: keep assets/.
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+# Rendering shared with the github-stats Cloudflare Worker (worker/).
+[[module.mounts]]
+source = "../worker/src/render.js"
+target = "assets/js/github-highlights/render.js"
+
 [params]
 author = "Mathieu Scheltienne"
 avatarurl = "img/avatar_mathieu.jpg"
@@ -35,14 +45,16 @@ keywords = "developer,personal"
 token = "dcb3128e14fe42dcb6e0ef9fd62cbe53"
 
 [params.githubHighlights]
-maintainedRepos = [
-  "miplabch/nigsp",
-  "mne-tools/mne-icalabel",
-  "mne-tools/mne-lsl",
-  "mne-tools/mne-python",
-  "vferat/pycrostates",
+# Served by the github-stats Cloudflare Worker (worker/). To test locally
+# against `wrangler dev`, set HUGO_PARAMS_GITHUBHIGHLIGHTS_ENDPOINT.
+endpoint = "https://github-stats.scheltienne.net/data.json"
+stats = [
+  "commits",
+  "pullRequestsMerged",
+  "reviews",
+  "repositories",
+  "organizations",
 ]
-username = "mscheltienne"
 
 [[params.social]]
 icon = "fa-brands fa-linkedin fa-2x"

@@ -56,8 +56,16 @@ body.colorscheme-dark .dark-only {
   }
 }
 
-/* GitHub highlights on the home page (rendered by js/github-highlights.js). */
+/* GitHub highlights on the home page (rendered by js/github-highlights/main.js).
+   Colors: keep in sync with PALETTES in worker/src/render.js, used by the
+   standalone README card. */
 .gh-highlights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  width: 100%;
+  margin: 2.4rem 0 1rem;
   --gh-muted: #616161;
   --gh-accent: #1565c0;
   --gh-track: #e0e0e0;
@@ -100,15 +108,6 @@ body.colorscheme-dark .gh-highlights {
   min-width: 0;
 }
 
-.gh-highlights {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
-  width: 100%;
-  margin: 2.4rem 0 1rem;
-}
-
 .gh-highlights[hidden],
 .gh-rank[hidden] {
   display: none;
@@ -122,25 +121,34 @@ body.colorscheme-dark .gh-highlights {
   cursor: help;
 }
 
+.gh-rank-graph {
+  line-height: 0;
+}
+
 .gh-rank-ring {
   width: 9rem;
   height: 9rem;
-}
-
-.gh-rank-ring circle {
-  fill: none;
-  stroke-width: 8;
 }
 
 .gh-rank-track {
   stroke: var(--gh-track);
 }
 
+/* The fill level is set by the stroke-dasharray attribute; animate from empty. */
 .gh-rank-progress {
   stroke: var(--gh-accent);
-  stroke-linecap: round;
-  stroke-dasharray: 0 100;
-  transition: stroke-dasharray 1s ease-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gh-rank-progress {
+    animation: gh-ring 1s ease-out;
+  }
+}
+
+@keyframes gh-ring {
+  from {
+    stroke-dasharray: 0 100;
+  }
 }
 
 .gh-rank-level {
@@ -196,7 +204,6 @@ body.colorscheme-dark .gh-highlights {
 .gh-heatmap-graph svg {
   display: block;
   width: 100%;
-  min-width: 52rem;
   height: auto;
 }
 
@@ -234,6 +241,11 @@ body.colorscheme-dark .gh-highlights {
 
   .gh-heatmap {
     flex-basis: 100%;
+  }
+
+  /* Keep the cells readable: scroll horizontally instead of shrinking. */
+  .gh-heatmap-graph svg {
+    min-width: 52rem;
   }
 
   .gh-heatmap figcaption {

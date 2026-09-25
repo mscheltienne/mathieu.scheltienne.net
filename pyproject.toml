@@ -6,10 +6,14 @@ dependencies = [
 ]
 description = 'Python linter(s) for my personal website.'
 name = 'linter'
-requires-python = '>=3.10'
+requires-python = '>=3.11'
 version = '0.1.0'
 
 [tool.tomlsort]
 all = true
 ignore_case = true
 trailing_comma_inline_array = true
+
+# Display order of the GitHub highlights stats.
+[tool.tomlsort.overrides."params.githubHighlights.stats"]
+inline_arrays = false
