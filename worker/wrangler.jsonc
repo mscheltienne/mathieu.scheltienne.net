@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "github-stats",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  // Preview versions would share the token and the KV data with production.
+  "preview_urls": false,
+  "routes": [{ "pattern": "github-stats.scheltienne.net", "custom_domain": true }],
+  "kv_namespaces": [
+    {
+      "binding": "CACHE",
+      // Created in the Cloudflare dashboard (Storage & Databases > KV).
+      "id": "791169a89e874eab8126d1e85f25bc65"
+    }
+  ],
+  "observability": { "enabled": true }
+  // Secret (not in this file): GITHUB_TOKEN, a classic token with `repo` and
+  // `read:user`. Locally, put it in worker/.dev.vars (git-ignored).
+}

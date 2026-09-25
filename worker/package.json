@@ -1,0 +1,15 @@
+{
+  "name": "github-stats-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "fetch-local": "node scripts/fetch-local.mjs",
+    "render-card": "node scripts/render-card.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.140.0"
+  }
+}

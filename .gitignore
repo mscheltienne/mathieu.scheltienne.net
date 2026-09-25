@@ -17,3 +17,9 @@ src/resources
 
 # Windows
 build/
+
+# Node / Cloudflare Workers
+node_modules/
+.wrangler/
+.dev.vars*
+worker/dist/

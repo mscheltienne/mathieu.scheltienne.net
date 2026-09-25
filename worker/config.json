@@ -1,0 +1,11 @@
+{
+  "username": "mscheltienne",
+  "maintainedRepos": [
+    "miplabch/nigsp",
+    "mne-tools/mne-icalabel",
+    "mne-tools/mne-lsl",
+    "mne-tools/mne-python",
+    "vferat/pycrostates"
+  ],
+  "cardStats": ["commits", "pullRequestsMerged", "reviews", "repositories", "organizations"]
+}
