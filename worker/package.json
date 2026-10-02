@@ -10,6 +10,6 @@
     "render-card": "node scripts/render-card.mjs"
   },
   "devDependencies": {
-    "wrangler": "^4.140.0"
+    "wrangler": "^4.143.0"
   }
 }
