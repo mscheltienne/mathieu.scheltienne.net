@@ -13,6 +13,6 @@ repos:
             files: ^(pyproject\.toml|src/[^/]+\.toml)$
 
     - repo: https://github.com/biomejs/pre-commit
-      rev: v2.5.14
+      rev: v2.5.15
       hooks:
           - id: biome-check
