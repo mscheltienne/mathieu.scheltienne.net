@@ -1,0 +1,3 @@
+# Link checker configuration, read from the working directory (CI and local runs).
+# LinkedIn answers bots with HTTP 999.
+exclude = ['linkedin\.com']
