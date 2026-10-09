@@ -2,6 +2,10 @@
 title = "MNE-Python"
 description = "Open-source Python package for exploring, visualizing, and analyzing human neurophysiological data (MEG, EEG, sEEG, ECoG, NIRS, and more)."
 date = "2023-03-01"
+role = "Maintainer"
+github = "https://github.com/mne-tools/mne-python"
+documentation = "https://mne.tools/stable/"
+pypi = "https://pypi.org/project/mne/"
 series = ["Neuroscience"]
 +++
 

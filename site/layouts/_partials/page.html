@@ -1,18 +1,29 @@
 <section class="container page">
   <article>
     {{ with .Title }}
-    <header>
-      <div class="post-content-header">
-        {{ with $.Resources.GetMatch "featured.*" }}
-          {{ with .Process "webp" }}
-          <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Title }} logo"/>
-          {{ end }}
-        {{ end }}
+    <header class="page-header">
+      {{/* Page bundle logo: logo.*, or logo-light.* and logo-dark.* */}}
+      {{ with or ($.Resources.GetMatch "logo-light.*") ($.Resources.GetMatch "logo.*") }}
+        {{ $dark := $.Resources.GetMatch "logo-dark.*" }}
+        {{ $alt := printf "%s logo" $.Title }}
+        <div class="page-logo">
+          {{ partial "inline/logo.html" (dict "img" . "alt" $alt "class" (cond (ne $dark nil) "light-only" "")) }}
+          {{ with $dark }}{{ partial "inline/logo.html" (dict "img" . "alt" $alt "class" "dark-only") }}{{ end }}
+        </div>
+      {{ end }}
+      <div class="page-heading">
         <h1 class="title">
-          <a class="title-link" href="{{ $.Permalink | safeURL }}">
-            {{ . }}
-          </a>
+          <a class="title-link" href="{{ $.Permalink | safeURL }}">{{ . }}</a>
         </h1>
+        {{ with $.Description }}<p class="page-description">{{ . }}</p>{{ end }}
+        {{ with $.Params.role }}
+        <p class="page-meta">
+          <span>{{ . }} · since {{ $.Date | time.Format "January 2006" }}</span>
+          {{ with $.Params.github }}<a href="{{ . }}"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>{{ end }}
+          {{ with $.Params.documentation }}<a href="{{ . }}"><i class="fa-solid fa-book" aria-hidden="true"></i> Documentation</a>{{ end }}
+          {{ with $.Params.pypi }}<a href="{{ . }}"><i class="fa-brands fa-python" aria-hidden="true"></i> PyPI</a>{{ end }}
+        </p>
+        {{ end }}
       </div>
     </header>
     {{ end }}
@@ -27,3 +38,14 @@
     </footer>
   </article>
 </section>
+
+{{/* SVG logos are served as-is, raster ones resized for 2x displays as WebP. */}}
+{{ define "partials/inline/logo.html" }}
+  {{ if eq .img.MediaType.SubType "svg" }}
+    <img src="{{ .img.RelPermalink }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }}/>
+  {{ else }}
+    {{ with .img.Resize "x180 webp" }}
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.alt }}"{{ with $.class }} class="{{ . }}"{{ end }}/>
+    {{ end }}
+  {{ end }}
+{{ end }}

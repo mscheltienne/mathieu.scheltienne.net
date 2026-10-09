@@ -8,14 +8,51 @@ img {
   width: 100px;
 }
 
-.post-content-header {
+/* Page header: logo, then title, description and project meta (role, links). */
+.page-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 1.6rem 3.2rem;
+  margin-bottom: 3.2rem;
 }
 
-.post-content-header img {
-  margin-right: 20px;
-  max-width: 12%;
+/* Same box on every page, so the titles line up whatever the logo's shape. */
+.page-logo img {
+  width: 12rem;
+  height: 9rem;
+  object-fit: contain;
+}
+
+.page-heading {
+  flex: 1 1 30rem;
+  min-width: 0;
+}
+
+.page-heading .title {
+  margin: 0;
+}
+
+/* The theme justifies and hyphenates article paragraphs (.content article p). */
+.content article p.page-description,
+.content article p.page-meta {
+  text-align: left;
+  hyphens: manual;
+}
+
+.page-description {
+  margin: 0.4rem 0 0;
+  font-size: 1.8rem;
+  color: color-mix(in srgb, currentColor 70%, transparent);
+}
+
+.page-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.6rem;
+  margin: 0.8rem 0 0;
+  font-size: 1.5rem;
+  color: color-mix(in srgb, currentColor 70%, transparent);
 }
 
 /* Portrait floated on the right of a page, with the text wrapping around it. */

@@ -2,6 +2,10 @@
 title = "Pycrostates"
 description = "Microstates analysis with MNE-Python."
 date = "2022-06-01"
+role = "Co-lead developer"
+github = "https://github.com/vferat/pycrostates"
+documentation = "https://pycrostates.readthedocs.io/"
+pypi = "https://pypi.org/project/pycrostates/"
 series = ["Neuroscience"]
 +++
 

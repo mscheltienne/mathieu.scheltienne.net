@@ -2,6 +2,10 @@
 title = "MNE-LSL"
 description = "A framework for real-time brain signal streaming with MNE-Python."
 date = "2023-10-01"
+role = "Lead developer"
+github = "https://github.com/mne-tools/mne-lsl"
+documentation = "https://mne.tools/mne-lsl/"
+pypi = "https://pypi.org/project/mne-lsl/"
 series = ["Neuroscience"]
 +++
 
