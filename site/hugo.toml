@@ -4,6 +4,12 @@ locale = 'en-us'
 theme = 'hugo-coder'
 title = 'Mathieu Scheltienne'
 
+# Publish page bundle files only when used (e.g. not the originals of resized images).
+[[cascade]]
+
+[cascade.build]
+publishResources = false
+
 [markup.highlight]
 style = "github-dark"
 

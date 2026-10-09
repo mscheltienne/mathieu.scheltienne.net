@@ -26,12 +26,16 @@
       <span class="date">{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2006" ) }}</span>
       <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
     </div>
-    {{ with .Params.longImage }}
+    {{/* Page bundle images: banner.* and, if the banner needs one, banner-dark.* */}}
+    {{ with .Resources.GetMatch "banner.*" }}
+      {{ $dark := $page.Resources.GetMatch "banner-dark.*" }}
       <div class="list-item-image">
-        <img src="{{ . | relURL }}" alt="{{ $page.Title }} logo"{{ if $page.Params.longImageDark }} class="light-only"{{ end }}/>
-        {{ with $page.Params.longImageDark }}
-        <img src="{{ . | relURL }}" alt="{{ $page.Title }} logo" class="dark-only"/>
+        {{ with .Resize "300x webp" }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $page.Title }} logo"{{ if $dark }} class="light-only"{{ end }}/>
         {{ end }}
+        {{ with $dark }}{{ with .Resize "300x webp" }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $page.Title }} logo" class="dark-only"/>
+        {{ end }}{{ end }}
       </div>
     {{ end }}
   </li>
