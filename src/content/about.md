@@ -1,4 +1,5 @@
 +++
+avatar = true
 description = "About Mathieu Scheltienne: senior software developer & architect at Dandelion Science, MNE-Python maintainer, with a background in M/EEG, neurofeedback and neuromodulation."
 +++
 
