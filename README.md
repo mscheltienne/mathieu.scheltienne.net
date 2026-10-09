@@ -4,8 +4,8 @@
 
 Source of my personal website, built with [Hugo](https://gohugo.io) (extended, ≥ 0.158)
 and the [hugo-coder](https://github.com/luizdepra/hugo-coder) theme (git submodule). The
-site lives in `src/`: content in `src/content/`, theme overrides in `src/layouts/` and
-`src/assets/`. The GitHub highlights on the home page are served by a Cloudflare Worker
+site lives in `site/`: content in `site/content/`, theme overrides in `site/layouts/` and
+`site/assets/`. The GitHub highlights on the home page are served by a Cloudflare Worker
 in `worker/`, whose SVG rendering (`worker/src/render.js`) is shared with the site.
 
 On push to `main`, GitHub Actions deploys the site to GitHub Pages and Cloudflare Workers
@@ -17,7 +17,7 @@ Builds deploys the Worker.
 git submodule update --init --recursive  # fetch the theme
 brew install hugo                        # or the extended build from the GitHub releases
 
-cd src && hugo server                    # http://localhost:1313, live reload
+cd site && hugo server                   # http://localhost:1313, live reload
 uvx pre-commit run --all-files           # lint (yamllint, toml-sort, Biome)
 ```
 
@@ -29,7 +29,7 @@ echo 'GITHUB_TOKEN=<token>' > .dev.vars  # git-ignored
 npm run dev                              # http://localhost:8787/data.json and /card.svg
 npm run build                            # bundle check, as in CI
 
-# Site against the local Worker (from src/):
+# Site against the local Worker (from site/):
 HUGO_PARAMS_GITHUBHIGHLIGHTS_ENDPOINT=http://localhost:8787/data.json hugo server
 
 # Without wrangler: fetch the data, then render the README card to preview it.

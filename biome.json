@@ -2,7 +2,7 @@
   "$schema": "https://biomejs.dev/schemas/2.5.14/schema.json",
   "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
   "files": {
-    "includes": ["biome.json", "src/assets/css/**", "src/assets/js/**", "worker/**", "!worker/package-lock.json"]
+    "includes": ["biome.json", "site/assets/css/**", "site/assets/js/**", "worker/**", "!worker/package-lock.json"]
   },
   "formatter": { "indentStyle": "space", "indentWidth": 2, "lineWidth": 120 },
   "linter": { "rules": { "preset": "recommended" } },

@@ -1,7 +1,7 @@
 // GitHub highlights on the home page: rank ring, stats and contribution
 // heatmap, rendered in the browser from the github-stats Worker's /data.json
 // (see worker/). Bundled by Hugo (js.Build) from layouts/_partials/home/extensions.html.
-// render.js is worker/src/render.js, mounted into the assets by src/hugo.toml.
+// render.js is worker/src/render.js, mounted into the assets by site/hugo.toml.
 import { heatmapSVG, ringSVG, statItems, topPercent } from "./render.js";
 
 const root = document.querySelector(".gh-highlights");
