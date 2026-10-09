@@ -1,0 +1,27 @@
+name: linkcheck
+on:  # yamllint disable-line rule:truthy
+  schedule:
+    - cron: '0 6 * * 1'  # Mondays, 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lychee:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: true
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+      # Root-relative internal links, resolved by lychee against the build directory.
+      - run: hugo -s site --baseURL / --gc
+      # Configuration in lychee.toml.
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --root-dir ${{ github.workspace }}/site/public 'site/public/**/*.html'

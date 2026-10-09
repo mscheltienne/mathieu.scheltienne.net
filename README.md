@@ -18,7 +18,10 @@ git submodule update --init --recursive  # fetch the theme
 brew install hugo                        # or the extended build from the GitHub releases
 
 hugo server -s site                      # http://localhost:1313, live reload
-uvx pre-commit run --all-files           # lint (yamllint, toml-sort, Biome)
+uvx pre-commit run --all-files           # lint (typos, actionlint, yamllint, toml-sort, Biome, …)
+
+# Link check, as in the weekly linkcheck workflow (brew install lychee):
+hugo -s site --baseURL / -d /tmp/site && lychee --root-dir /tmp/site '/tmp/site/**/*.html'
 ```
 
 Worker (requires a GitHub token, classic, with `repo` and `read:user`):
