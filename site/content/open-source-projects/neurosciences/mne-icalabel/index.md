@@ -2,6 +2,10 @@
 title = "MNE-ICALabel"
 description = "Automatically label independent components that stem from an Independent Component Analysis of brain signals."
 date = "2022-05-01"
+role = "Co-lead developer"
+github = "https://github.com/mne-tools/mne-icalabel"
+documentation = "https://mne.tools/mne-icalabel/"
+pypi = "https://pypi.org/project/mne-icalabel/"
 series = ["Neuroscience"]
 +++
 

@@ -2,6 +2,10 @@
 title = "NiGSP"
 description = "Graph Signal Processing on multimodal MRI data."
 date = "2024-04-01"
+role = "Maintainer"
+github = "https://github.com/MIPLabCH/nigsp"
+documentation = "https://nigsp.readthedocs.io/"
+pypi = "https://pypi.org/project/nigsp/"
 series = ["Neuroscience"]
 +++
 
