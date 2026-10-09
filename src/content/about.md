@@ -1,3 +1,7 @@
++++
+description = "About Mathieu Scheltienne: senior software developer & architect at Dandelion Science, MNE-Python maintainer, with a background in M/EEG, neurofeedback and neuromodulation."
++++
+
 I'm Mathieu, an engineer and developer with a passion for biotechnologies and neuroscience. I enjoy contributing to open-source projects and helping promote science through the [scientific python organization](https://scientific-python.org/). In 2023, I joined the maintainer team of [MNE-Python](https://mne.tools), the largest Python ecosystem for M/EEG data analysis.
 
 Currently, I’m a Senior Software Developer & Architect at [Dandelion Science](https://www.dandelion.science), where I help build the world’s first generative neuromodulation platform for brain treatment.
