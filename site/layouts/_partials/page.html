@@ -3,8 +3,10 @@
     {{ with .Title }}
     <header>
       <div class="post-content-header">
-        {{ with $.Params.featuredImage }}
-          <img src="{{ . | relURL }}" alt="{{ $.Title }} logo"/>
+        {{ with $.Resources.GetMatch "featured.*" }}
+          {{ with .Process "webp" }}
+          <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Title }} logo"/>
+          {{ end }}
         {{ end }}
         <h1 class="title">
           <a class="title-link" href="{{ $.Permalink | safeURL }}">
@@ -16,7 +18,7 @@
     {{ end }}
 
     {{ if .Params.avatar }}
-      <img class="page-avatar" src="{{ site.Params.avatarURL | relURL }}" alt="{{ site.Params.author }}"/>
+      {{ partial "avatar.html" "page-avatar" }}
     {{ end }}
     {{ .Content }}
 

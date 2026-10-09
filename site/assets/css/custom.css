@@ -1,6 +1,11 @@
+/* Images carry width and height attributes (no layout shift while loading): keep
+   their aspect ratio when CSS constrains the width. */
+img {
+  height: auto;
+}
+
 .error img {
   width: 100px;
-  height: 100px;
 }
 
 .post-content-header {
@@ -11,14 +16,12 @@
 .post-content-header img {
   margin-right: 20px;
   max-width: 12%;
-  height: auto;
 }
 
 /* Portrait floated on the right of a page, with the text wrapping around it. */
 .page-avatar {
   float: right;
   width: 16rem;
-  height: auto;
   margin: 0 0 1.6rem 2.4rem;
   border-radius: 50%;
 }
@@ -45,7 +48,6 @@
 .list-item-image {
   margin-right: 50px;
   max-width: 15%;
-  height: auto;
 }
 
 /* Images with a light and a dark variant, following the theme color scheme. */
