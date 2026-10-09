@@ -43,7 +43,7 @@ jobs:
       - run: npm run build
 
   deploy:
-    if: github.event_name == 'push'
+    if: ${{ github.event_name == 'push' }}
     needs: build
     timeout-minutes: 10
     runs-on: ubuntu-slim
