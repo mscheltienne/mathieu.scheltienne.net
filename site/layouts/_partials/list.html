@@ -26,8 +26,8 @@
       <span class="date">{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2006" ) }}</span>
       <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
     </div>
-    {{/* Page bundle images: banner.* and, if the banner needs one, banner-dark.* */}}
-    {{ with .Resources.GetMatch "banner.*" }}
+    {{/* Page bundle images: banner.*, or banner-light.* and banner-dark.* */}}
+    {{ with or (.Resources.GetMatch "banner-light.*") (.Resources.GetMatch "banner.*") }}
       {{ $dark := $page.Resources.GetMatch "banner-dark.*" }}
       <div class="list-item-image">
         {{ with .Resize "300x webp" }}

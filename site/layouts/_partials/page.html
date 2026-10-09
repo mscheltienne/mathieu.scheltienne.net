@@ -2,8 +2,8 @@
   <article>
     {{ with .Title }}
     <header class="page-header">
-      {{/* Page bundle logo: logo.* and, if the logo needs one, logo-dark.* */}}
-      {{ with $.Resources.GetMatch "logo.*" }}
+      {{/* Page bundle logo: logo.*, or logo-light.* and logo-dark.* */}}
+      {{ with or ($.Resources.GetMatch "logo-light.*") ($.Resources.GetMatch "logo.*") }}
         {{ $dark := $.Resources.GetMatch "logo-dark.*" }}
         {{ $alt := printf "%s logo" $.Title }}
         <div class="page-logo">
