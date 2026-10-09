@@ -1,0 +1,11 @@
+{{- /*
+  Avatar image from params.avatarURL (a file in assets/), resized to a 400 px WebP:
+  sharp on 2x displays at the largest displayed size (200 px on the home page).
+  The context is the class of the img element.
+*/ -}}
+{{- with resources.Get site.Params.avatarURL -}}
+  {{- $img := .Resize "400x webp" -}}
+  <img{{ with $ }} class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ site.Params.author }}"/>
+{{- else -}}
+  {{- errorf "avatar %q not found in assets/" site.Params.avatarURL -}}
+{{- end -}}

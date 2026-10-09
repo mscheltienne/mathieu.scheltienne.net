@@ -1,6 +1,8 @@
 <section class="container centered">
   <div class="error">
-    <img src="{{ "img/gopher.png" | relURL }}" alt="gopher" title="gopher" class="gopher"/>
+    {{ with (resources.Get "img/gopher.png").Resize "200x webp" }}
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="gopher" title="gopher" class="gopher"/>
+    {{ end }}
     <h1>404</h1>
     <h2>{{ i18n "page_not_found" }}</h2>
     <p>{{ i18n "page_does_not_exist" }}<br />{{ i18n "head_back" .Site.BaseURL | safeHTML }}</p>

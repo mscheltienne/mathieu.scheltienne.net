@@ -16,7 +16,7 @@
     {{ end }}
 
     {{ if .Params.avatar }}
-      <img class="page-avatar" src="{{ site.Params.avatarURL | relURL }}" alt="{{ site.Params.author }}"/>
+      {{ partial "avatar.html" "page-avatar" }}
     {{ end }}
     {{ .Content }}
 
