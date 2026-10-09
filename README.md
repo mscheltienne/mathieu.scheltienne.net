@@ -17,7 +17,7 @@ Builds deploys the Worker.
 git submodule update --init --recursive  # fetch the theme
 brew install hugo                        # or the extended build from the GitHub releases
 
-cd site && hugo server                   # http://localhost:1313, live reload
+hugo server -s site                      # http://localhost:1313, live reload
 uvx pre-commit run --all-files           # lint (yamllint, toml-sort, Biome)
 ```
 
@@ -29,8 +29,8 @@ echo 'GITHUB_TOKEN=<token>' > .dev.vars  # git-ignored
 npm run dev                              # http://localhost:8787/data.json and /card.svg
 npm run build                            # bundle check, as in CI
 
-# Site against the local Worker (from site/):
-HUGO_PARAMS_GITHUBHIGHLIGHTS_ENDPOINT=http://localhost:8787/data.json hugo server
+# Site against the local Worker (from the repository root):
+HUGO_PARAMS_GITHUBHIGHLIGHTS_ENDPOINT=http://localhost:8787/data.json hugo server -s site
 
 # Without wrangler: fetch the data, then render the README card to preview it.
 npm run fetch-local -- <token-file> data.json

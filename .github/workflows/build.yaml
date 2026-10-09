@@ -20,9 +20,7 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
-      - run: |
-          cd site
-          hugo --gc --cleanDestinationDir
+      - run: hugo -s site --gc --cleanDestinationDir
       - uses: actions/upload-artifact@v7
         with:
           name: website-build
