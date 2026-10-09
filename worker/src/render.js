@@ -1,7 +1,7 @@
 // Rendering of the GitHub highlights as SVG strings. Pure functions with no
 // DOM or runtime dependency, shared by the Cloudflare Worker (standalone SVG
 // card for the GitHub profile README) and the website, where Hugo mounts this
-// file as assets/js/github-highlights/render.js (see src/hugo.toml).
+// file as assets/js/github-highlights/render.js (see site/hugo.toml).
 
 export const PALETTES = {
   light: {

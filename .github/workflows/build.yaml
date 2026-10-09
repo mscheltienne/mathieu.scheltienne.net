@@ -20,13 +20,11 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
-      - run: |
-          cd src
-          hugo --gc --cleanDestinationDir
+      - run: hugo -s site --gc --cleanDestinationDir
       - uses: actions/upload-artifact@v7
         with:
           name: website-build
-          path: ./src/public
+          path: ./site/public
 
   worker:
     timeout-minutes: 10
@@ -45,7 +43,7 @@ jobs:
       - run: npm run build
 
   deploy:
-    if: github.event_name == 'push'
+    if: ${{ github.event_name == 'push' }}
     needs: build
     timeout-minutes: 10
     runs-on: ubuntu-slim
