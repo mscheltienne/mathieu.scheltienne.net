@@ -1,18 +1,23 @@
 <section class="container page">
   <article>
+    {{ with .Title }}
     <header>
       <div class="post-content-header">
-        {{ if .Params.featuredImage }}
-          <img src="{{ .Params.featuredImage | relURL }}"/>
+        {{ with $.Params.featuredImage }}
+          <img src="{{ . | relURL }}" alt="{{ $.Title }} logo"/>
         {{ end }}
         <h1 class="title">
-          <a class="title-link" href="{{ .Permalink | safeURL }}">
-            {{ .Title }}
+          <a class="title-link" href="{{ $.Permalink | safeURL }}">
+            {{ . }}
           </a>
         </h1>
       </div>
     </header>
+    {{ end }}
 
+    {{ if .Params.avatar }}
+      <img class="page-avatar" src="{{ site.Params.avatarURL | relURL }}" alt="{{ site.Params.author }}"/>
+    {{ end }}
     {{ .Content }}
 
     <footer>

@@ -14,6 +14,21 @@
   height: auto;
 }
 
+/* Portrait floated on the right of a page, with the text wrapping around it. */
+.page-avatar {
+  float: right;
+  width: 16rem;
+  height: auto;
+  margin: 0 0 1.6rem 2.4rem;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-avatar {
+    width: 12rem;
+  }
+}
+
 .list-item {
   display: flex;
   align-items: center;

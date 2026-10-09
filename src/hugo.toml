@@ -36,6 +36,7 @@ author = "Mathieu Scheltienne"
 avatarurl = "img/avatar_mathieu.jpg"
 colorScheme = "auto"
 customCSS = ["css/custom.css"]
+description = "Mathieu Scheltienne, software developer & architect in neurotechnology, MNE-Python maintainer and open-source Python developer."
 enableTwemoji = true
 hidecolorschemetoggle = false
 info = "Engineer, Developer, Open-source and Python enthusiast"
