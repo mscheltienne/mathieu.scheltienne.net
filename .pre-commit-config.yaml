@@ -31,6 +31,6 @@ repos:
           - id: toml-sort-fix
 
     - repo: https://github.com/biomejs/pre-commit
-      rev: v2.5.15
+      rev: v2.6.3
       hooks:
           - id: biome-check
