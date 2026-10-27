@@ -5,7 +5,7 @@ description = "About Mathieu Scheltienne: senior software developer & architect 
 
 I'm Mathieu, an engineer and developer with a passion for biotechnologies and neuroscience. I enjoy contributing to open-source projects and helping promote science through the [scientific python organization](https://scientific-python.org/). In 2023, I joined the maintainer team of [MNE-Python](https://mne.tools), the largest Python ecosystem for M/EEG data analysis.
 
-{{< company name="Read/Write Labs" link="https://readwritelabs.com/" logo="read-write-labs.svg" >}}
+{{< company name="Read/Write Labs" link="https://readwritelabs.com/" logo="read-write-labs.svg" dark="read-write-labs-dark.svg" >}}
 Currently, I’m a Senior Software Developer & Architect at [Read/Write Labs](https://readwritelabs.com/) (formerly Dandelion Science), a NeuroAI company using digital brains to develop precision therapies for brain disorders.
 {{< /company >}}
 

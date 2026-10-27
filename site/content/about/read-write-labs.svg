@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" version="1.1" viewBox="219.000000 122.400000 794.567000 115.300000" width="794.567000" height="115.300000" aria-label="read/write labs trademark">
-  <title>Read/write labs with trademark — for dark backgrounds</title><!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
+  <title>Read/write labs with trademark — for light backgrounds</title><!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
   <defs>
     <style>
       .st0 {
@@ -404,7 +404,7 @@
       }
 
       .st100 {
-        fill: #ccc;
+        fill: #666;
       }
 
       .st101 {
@@ -412,7 +412,7 @@
       }
 
       .st102 {
-        fill: #fff;
+        fill: #303030;
       }
 
       .st103 {
@@ -1293,4 +1293,4 @@
       <path class="st100" d="M946,216c-4.8,0-8.7-1.1-11.8-3.4-3.1-2.3-5.1-5.5-5.9-9.6l4-1c1.5,6.8,6.1,10.2,13.8,10.2s7.4-1,10-3c2.5-2,3.8-4.5,3.8-7.5,0-4.8-3-7.9-9.1-9.4l-8.1-2c-8.4-2-12.6-6.5-12.6-13.3s.7-5.2,2.2-7.3,3.4-3.7,6-4.9,5.4-1.7,8.7-1.7,7.9,1,10.6,3.1,4.7,4.9,5.9,8.7l-3.9,1c-.9-2.8-2.4-5-4.5-6.6-2-1.6-4.8-2.4-8.2-2.4s-6.8.9-9.2,2.8c-2.4,1.9-3.5,4.3-3.5,7.3,0,4.8,3.2,8.1,9.7,9.6l8,2c8.1,2,12.2,6.3,12.2,13s-.8,5.3-2.3,7.5c-1.5,2.2-3.6,3.9-6.4,5.1s-5.9,1.9-9.4,1.9Z"/>
     </g>
   </g>
-<g id="trademark" fill="#CCCCCC" aria-label="trademark" transform="translate(16.4 0) matrix(0.022388059701 0 0 -0.022388059701 971.264179104478 180.058208955224)"><path d="M851 954 692 1315V954H597V1490H713L876 1099L1040 1490H1157V954H1060V1314L903 954ZM244 954V1406H82V1490H503V1406H341V954Z"/></g></svg>
+<g id="trademark" fill="#666" aria-label="trademark" transform="translate(16.4 0) matrix(0.022388059701 0 0 -0.022388059701 971.264179104478 180.058208955224)"><path d="M851 954 692 1315V954H597V1490H713L876 1099L1040 1490H1157V954H1060V1314L903 954ZM244 954V1406H82V1490H503V1406H341V954Z"/></g></svg>
