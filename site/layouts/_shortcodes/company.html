@@ -1,0 +1,31 @@
+{{- /*
+  Paragraph about one or more companies, with their logos stacked on the right linking
+  to their websites. The logos come from page bundle images: logo, and optionally dark,
+  a variant for the dark color scheme. name, link, logo and dark are comma-separated
+  lists, one entry per company (an empty dark entry for a logo without variant).
+  Usage:
+    {{< company name="X,Y" link="https://x.com/,https://y.com/" logo="x.svg,y.svg" dark="x-dark.svg" >}}
+    Markdown paragraph.
+    {{< /company >}}
+*/ -}}
+{{- $names := split (.Get "name") "," -}}
+{{- $links := split (.Get "link") "," -}}
+{{- $darks := split (.Get "dark" | default "") "," -}}
+<div class="company">
+  <div class="company-text">{{ .Inner | .Page.RenderString (dict "display" "block") }}</div>
+  <div class="company-logos">
+  {{- range $i, $logo := split (.Get "logo") "," }}
+    {{- $alt := printf "%s logo" (index $names $i) -}}
+    {{- $dark := "" -}}
+    {{- with and (lt $i (len $darks)) (index $darks $i) }}{{ $dark = $.Page.Resources.Get . }}{{ end }}
+    <a class="company-logo" href="{{ index $links $i }}">
+      {{- with $.Page.Resources.Get $logo }}
+      <img src="{{ .RelPermalink }}" alt="{{ $alt }}"{{ if $dark }} class="light-only"{{ end }}/>
+      {{- else }}{{ errorf "logo %q not found in the page bundle" $logo }}{{ end }}
+      {{- with $dark }}
+      <img src="{{ .RelPermalink }}" alt="{{ $alt }}" class="dark-only"/>
+      {{- end }}
+    </a>
+  {{- end }}
+  </div>
+</div>
