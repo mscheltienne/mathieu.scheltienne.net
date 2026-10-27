@@ -69,6 +69,48 @@ img {
   }
 }
 
+/* Paragraph about companies with their logos stacked on the right (shortcode company),
+   in a column matching the page avatar's width and margin; the logos move above the
+   text on small screens. Starts below the floated avatar rather than squeezing beside
+   it. */
+.company {
+  clear: right;
+  display: flex;
+  align-items: center;
+  gap: 0 2.4rem;
+}
+
+.company-logos {
+  flex: 0 0 16rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.company-logo img {
+  width: 100%;
+  max-height: 6rem;
+  object-fit: contain;
+}
+
+.company-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .company {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .company-logos {
+    flex-basis: auto;
+    width: 14rem;
+    margin-top: 1.6rem;
+  }
+}
+
 .list-item {
   display: flex;
   align-items: center;
