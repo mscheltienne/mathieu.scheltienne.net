@@ -18,7 +18,7 @@ jobs:
       - uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
-          extended: true
+      - run: sudo snap install dart-sass
       # Root-relative internal links, resolved by lychee against the build directory.
       - run: hugo -s site --baseURL / --gc
       # Configuration in lychee.toml.
