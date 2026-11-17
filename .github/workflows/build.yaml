@@ -19,7 +19,7 @@ jobs:
       - uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
-          extended: true
+      - run: sudo snap install dart-sass
       - run: hugo -s site --gc --cleanDestinationDir
       - uses: actions/upload-artifact@v7
         with:

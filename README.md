@@ -2,7 +2,7 @@
 
 # mathieu.scheltienne.net
 
-Source of my personal website, built with [Hugo](https://gohugo.io) (extended, ≥ 0.158)
+Source of my personal website, built with [Hugo](https://gohugo.io) (≥ 0.158, with Dart Sass)
 and the [hugo-coder](https://github.com/luizdepra/hugo-coder) theme (git submodule). The
 site lives in `site/`: content in `site/content/`, theme overrides in `site/layouts/` and
 `site/assets/`. The GitHub highlights on the home page are served by a Cloudflare Worker
@@ -15,7 +15,8 @@ Builds deploys the Worker.
 
 ```sh
 git submodule update --init --recursive  # fetch the theme
-brew install hugo                        # or the extended build from the GitHub releases
+brew tap dart-lang/dart && brew trust --formula dart-lang/dart/dart  # Dart Sass dependency
+brew install hugo sass/sass/sass         # Hugo + Dart Sass (the theme's SCSS needs it)
 
 hugo server -s site                      # http://localhost:1313, live reload
 uvx pre-commit run --all-files           # lint (typos, actionlint, yamllint, toml-sort, Biome, …)
