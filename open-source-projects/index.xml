@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Open-source projects on Mathieu Scheltienne</title>
+		<link>https://mathieu.scheltienne.net/open-source-projects/</link>
+		<description>Recent content in Open-source projects on Mathieu Scheltienne</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+			<copyright>© Mathieu Scheltienne</copyright>
+		
+		
+			<lastBuildDate></lastBuildDate>
+		
+			<atom:link href="https://mathieu.scheltienne.net/open-source-projects/index.xml" rel="self" type="application/rss+xml" />
+	</channel>
+</rss>
